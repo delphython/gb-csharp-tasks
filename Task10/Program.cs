@@ -41,7 +41,6 @@ void removeSecondDigitVersion3()
     int result = (number / 100) * 10 + (number % 10);
 
     // Выводим в консоль информацию
-    // Удаляем из строки символ по его индексу
     Console.WriteLine(
         "Удалили из числа {0} вторую цифру и получили число {1}",
         number, result);
