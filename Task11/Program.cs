@@ -19,8 +19,8 @@ if (inputFirstLine != null && inputSecondLine != null)
         
         // Проверяем, есть ли остаток от деления и выводим данные в консоль
         Console.WriteLine("Число {0}" + (
-            (inputFirstNumber % inputSecondNumber == 0) ? " кратно {1}" : " не кратно {1}"
-        ), inputFirstNumber, inputSecondNumber);
+            (inputSecondNumber % inputFirstNumber == 0) ? " кратно {1}" : " не кратно {1} и остаток от деления = {2}"
+        ), inputSecondNumber, inputFirstNumber, inputSecondNumber % inputFirstNumber);
 
     }
     catch
