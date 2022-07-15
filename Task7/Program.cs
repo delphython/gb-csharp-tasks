@@ -1,8 +1,24 @@
-﻿string? inputLine = Console.ReadLine();
+﻿//------------------------ Решение задачи 7 ------------------------------
+// Напишите программу, которая на вход принимает число и выдаёт, является
+// ли число чётным (делится ли оно на два без остатка).
+//------------------------------------------------------------------------
+
+// Считываем данные с консоли
+string? inputLine = Console.ReadLine();
 
 if (inputLine != null)
 {
-    int inputNumber = int.Parse(inputLine);
+    try 
+    {
+        //Парсим число
+        int inputNumber = int.Parse(inputLine);
 
-    Console.WriteLine("Число {0}" + ((inputNumber%2 == 0) ? " четное." : " нечетное."), inputNumber);
+        // Проверяем на четность и выводим информацию
+        Console.WriteLine("Число {0}" + ((inputNumber%2 == 0) ? " четное." : " нечетное."), inputNumber);
+    }
+    catch (Exception e)
+    {
+        // Выводим сообщение об ошибке
+        Console.WriteLine($"Что-то здесь не так: {e}");
+    }
 }

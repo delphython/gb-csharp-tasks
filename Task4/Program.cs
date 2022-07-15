@@ -1,16 +1,28 @@
-﻿string? inputLine = Console.ReadLine();
+﻿//------------------------ Решение задачи 4 ------------------------------
+// Напишите программу, которая принимает на вход трёхзначное число и на 
+// выходе показывает последнюю цифру этого числа.
+//------------------------------------------------------------------------
+
+// Считываем данные с консоли
+string? inputLine = Console.ReadLine();
 
 if (inputLine != null)
 {
-    // int inputNumber = int.Parse(inputLine);
-    // int outputNumber = inputNumber % 10;
-    
-    char outputNumber = inputLine[inputLine.Length - 1];
+    try 
+    {
+        // Берем последний символ строки
+        char outputNumber = inputLine[inputLine.Length - 1];
 
-    Console.WriteLine(outputNumber);
-    Console.WriteLine(
-        "Последняя цифра числа {0} равна {1}.",
-        inputLine,
-        outputNumber
-    );
+        // Выводим в консоль информацию по задаче
+        Console.WriteLine(
+            "Последняя цифра числа {0} равна {1}.",
+            inputLine,
+            outputNumber
+        );
+    }
+    catch (Exception e)
+    {
+        // Выводим сообщение об ошибке
+        Console.WriteLine($"Что-то здесь не так: {e}");
+    }
 }

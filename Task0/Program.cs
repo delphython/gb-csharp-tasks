@@ -1,11 +1,26 @@
-﻿string? inputLine = Console.ReadLine();
+﻿//------------------------ Решение задачи 0 ------------------------------
+// Напишите программу, которая на вход принимает число и выдаёт его квадрат
+//------------------------------------------------------------------------
+
+// Считываем данные с консоли
+string? inputLine = Console.ReadLine();
 
 if (inputLine != null)
 {
-    int inputNumber = int.Parse(inputLine);
+    try 
+    {
+        //Парсим число
+        int inputNumber = int.Parse(inputLine);
 
-    // int outputNumber = inputNumber * inputNumber;
-    int outputNumber = (int)Math.Pow(inputNumber, 2);
+        // Считаем квадрат числа
+        int outputNumber = (int)Math.Pow(inputNumber, 2);
 
-    Console.WriteLine(outputNumber);
+        // и выводим его
+        Console.WriteLine(outputNumber);
+    }
+    catch (Exception e)
+    {
+        // Выводим сообщение об ошибке
+        Console.WriteLine($"Что-то здесь не так: {e}");
+    }
 }
