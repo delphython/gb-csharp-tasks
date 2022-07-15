@@ -29,6 +29,6 @@ if (inputFirstLine != null && inputSecondLine != null)
     catch
     {
         // Выводим сообщение об ошибке
-        Console.WriteLine("error!");
+        Console.WriteLine($"Что-то здесь не так: {e}");
     }
 }
