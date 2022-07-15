@@ -27,18 +27,12 @@ void getMaxDigitInNumberVersion2()
     // Генерируем случайное число и переводим его в строку
     string number = new Random().Next(10, 100).ToString();
 
-    // Объявляем список
-    List<char> digitsList = new List<char>();
-
-    // Добавляем элементы указанной коллекции в конец списка
-    digitsList.AddRange(number);
-
     // Выводим в консоль информацию с максимальным значением
     // цифры среди элементов списка
     Console.WriteLine(
         "Максимальной цифрой числа {0} является цифра {1}",
         number,
-        digitsList.Max()
+        Math.Max(int.Parse(number[0].ToString()), int.Parse(number[1].ToString()))
     );
 }
 
