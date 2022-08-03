@@ -19,7 +19,7 @@ if (inputLine != null)
         ), inputNumber);
 
     }
-    catch
+    catch (Exception e)
     {
         // Выводим сообщение об ошибке
         Console.WriteLine($"Что-то здесь не так: {e}");

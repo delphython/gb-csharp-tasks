@@ -26,7 +26,7 @@ if (inputFirstLine != null && inputSecondLine != null)
         ), inputSecondNumber, inputFirstNumber);
 
     }
-    catch
+    catch (Exception e)
     {
         // Выводим сообщение об ошибке
         Console.WriteLine($"Что-то здесь не так: {e}");
