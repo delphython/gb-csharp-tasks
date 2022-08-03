@@ -22,7 +22,7 @@ if (inputLine != null)
         }
 
         // Считаем сумму всех чисел массива, переводим в строку и выводим ее
-        Console.WriteLine(sumNumberArray.Sum().ToString());
+        Console.WriteLine($"Сумма всех чисел от 1 до {inputLine} равно {sumNumberArray.Sum().ToString()}");
     }
     catch (Exception e)
     {
