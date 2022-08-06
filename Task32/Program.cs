@@ -32,11 +32,11 @@ try
     // Заполняем массив
     int[] randNumberArray = fillRandArray(elementsAmount, numberFrom, numberTo); 
 
-    // Сумма положительных элементов
+    // Сумма положительных элементов массива
     IEnumerable<int> greaterThanZero = randNumberArray.Where(c => c > 0);
     int greaterSum = greaterThanZero.Sum();
 
-    // Сумма отрицательных элементов
+    // Сумма отрицательных элементов массива
     IEnumerable<int> lessThanZero = randNumberArray.Where(c => c < 0);
     int lessSum = lessThanZero.Sum();
     
