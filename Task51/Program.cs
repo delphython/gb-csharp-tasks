@@ -69,7 +69,7 @@ void getConsoleData(out int m, out int n)
     if (inputFirstLine != null && inputSecondLine != null)
     {
         m = int.Parse(inputFirstLine);
-        n = int.Parse(inputFirstLine);
+        n = int.Parse(inputSecondLine);
     }
 }
 
