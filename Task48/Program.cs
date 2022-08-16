@@ -7,7 +7,6 @@
 int[,] fillArray(int m, int n)
 {
     int[,] outputArray = new int[m, n];
-    Random rand = new Random();
     
     for (int i = 0; i < m; i++)
     {

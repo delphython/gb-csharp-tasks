@@ -28,7 +28,6 @@ int[,] changeArray(int[,] inputArray)
     int rowLenght = inputArray.GetLength(1);
 
     int[,] outputArray = new int[colLenght, rowLenght];
-    Random rand = new Random();
     
     for (int i = 0; i < colLenght; i++)
     {
