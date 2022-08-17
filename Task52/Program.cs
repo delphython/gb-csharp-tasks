@@ -36,7 +36,7 @@ void printTwoDimArray(int [,] inputArray, int m, int n)
 
     for (int i = 0; i < inputArray.GetLength(0); i++)
     {
-        for (int j = 0; j < inputArray.GetLength(0); j++)
+        for (int j = 0; j < inputArray.GetLength(1); j++)
         {
             if (i==m && j==n) Console.ForegroundColor = ConsoleColor.Red;
             Console.Write($"{inputArray[i, j]}\t");

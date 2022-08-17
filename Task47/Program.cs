@@ -25,7 +25,7 @@ string printTwoDimArray(int [,] inputArray)
     string outputString = "";
     for (int i = 0; i < inputArray.GetLength(0); i++)
     {
-        for (int j = 0; j < inputArray.GetLength(0); j++)
+        for (int j = 0; j < inputArray.GetLength(1); j++)
         {
             outputString += $"{inputArray[i, j]}\t";
         }
