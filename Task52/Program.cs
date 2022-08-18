@@ -32,8 +32,6 @@ int[,] fillArray(int m, int n)
 // Метод printTwoDimArray, который выводит двумерный массив в консоль
 void printTwoDimArray(int [,] inputArray, int m, int n)
 {
-    Random rand = new Random();
-
     for (int i = 0; i < inputArray.GetLength(0); i++)
     {
         for (int j = 0; j < inputArray.GetLength(1); j++)
