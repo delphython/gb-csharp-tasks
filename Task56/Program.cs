@@ -34,7 +34,6 @@ int[,] ChangeArray(int[,] inputArray)
     int rowLenght = inputArray.GetLength(0);
     int colLenght = inputArray.GetLength(1);
 
-    List<int> tmpList = new List<int>();
     int[,] outputArray = new int[colLenght, rowLenght];
 
     for (int i = 0; i < rowLenght; i++)
