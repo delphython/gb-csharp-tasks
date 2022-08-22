@@ -20,7 +20,7 @@ double[,] FillArray(int m, int n)
     return outputArray;
 }
 
-// Метод ChangeArray, который заменяет строки на столбцы 
+// Метод ChangeArray, который перемножает две матрицы 
 double[,] ChangeArray(double[,] inputArrayOne, double[,] inputArrayTwo)
 {
     int rowLenght = inputArrayOne.GetLength(0);
