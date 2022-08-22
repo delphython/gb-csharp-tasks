@@ -1,0 +1,98 @@
+﻿//------------------------ Решение задачи 60 ------------------------------
+// Задайте прямоугольный двумерный массив. Напишите программу, которая 
+// будет находить строку с наименьшей суммой элементов.
+//------------------------------------------------------------------------
+
+// Метод FillArray, который заполняет двумерный массив
+int[,] FillArray(int m, int n)
+{
+    int[,] outputArray = new int[m, n];
+    Random rand = new Random();
+    
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            outputArray[i, j] = rand.Next(0, 100);
+        }
+    }
+    
+    return outputArray;
+}
+
+// Метод ChangeArray, который упорядочит по 
+// убыванию элементы каждой строки двумерного массива
+int GetMinSumRow(int[,] inputArray)
+{
+    int rowLenght = inputArray.GetLength(0);
+    int colLenght = inputArray.GetLength(1);
+
+    List<int> tmpList = new List<int>();
+    List<int> outputList = new List<int>();
+
+    for (int i = 0; i < rowLenght; i++)
+    {
+        // Переносим строку массива в список
+        tmpList = Enumerable.Range(0, colLenght).Select(j => inputArray[i, j]).ToList();
+        // Добавляем во временный список сумму элементов строки
+        outputList.Add(tmpList.Sum());
+    }
+    
+    // Определяем и возвращаем первый индекс минимального элемента списка
+    return outputList.IndexOf(outputList.Min());
+}
+
+// Метод PrintTwoDimArray, который переводит двумерный массив в строку для вывода в консоль
+string PrintTwoDimArray(int [,] inputArray)
+{
+    string outputString = "";
+    for (int i = 0; i < inputArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inputArray.GetLength(1); j++)
+        {
+            outputString += $"{inputArray[i, j]}\t";
+        }
+        outputString +="\n";
+    }
+    
+    return outputString;
+}
+
+// Метод GetConsoleData для считывания данных с консоли
+void GetConsoleData(out int m, out int n)
+{
+    m = 0;
+    n = 0;
+    
+    Console.WriteLine("Введите размер двумерного массива m на n");
+    Console.Write("m = ");
+    string? inputFirstLine = Console.ReadLine();
+    Console.Write("n = ");
+    string? inputSecondLine = Console.ReadLine();
+
+    if (inputFirstLine != null && inputSecondLine != null)
+    {
+        m = int.Parse(inputFirstLine);
+        n = int.Parse(inputSecondLine);
+    }
+}
+
+try 
+{
+    //Считываем данные с консоли
+    int m;
+    int n;
+    GetConsoleData(out m, out n);
+    
+    // Заполняем массив
+    int[,] filledArray = FillArray(m, n);
+
+    // Выводим информацию в консоль
+    Console.WriteLine($"У массива:\n{PrintTwoDimArray(filledArray)}\nиндекс строки с наименьшей суммой: {GetMinSumRow(filledArray)}");
+
+}
+catch (Exception e)
+{
+    // Выводим сообщение об ошибке
+    Console.WriteLine($"Что-то здесь не так: {e}");
+}
