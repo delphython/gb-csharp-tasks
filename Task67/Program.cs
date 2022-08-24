@@ -6,10 +6,8 @@
 // Метод SumNaturalNumbers, который считает сумму натруальных чисел от M до N
 int SumNaturalNumbers(int numberFrom, int numberTo)
 {
-    if (numberTo == numberFrom)
-        return numberFrom;
-    else
-        return numberTo + SumNaturalNumbers(numberFrom, numberTo-1); 
+    if (numberTo == numberFrom) return numberFrom;
+    return numberTo + SumNaturalNumbers(numberFrom, numberTo-1); 
 }
 
 // Метод GetConsoleData для считывания данных с консоли
